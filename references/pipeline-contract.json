@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "target": "pipeline_definition",
+  "pipeline": {
+    "id": "pl_f786e20bea32",
+    "name": "File Ranger Pipeline",
+    "description": null,
+    "pageId": "bd4f9535-2b3a-4195-8257-9a20e5464b6a",
+    "collectionId": "coll_8432587f2424",
+    "runConcurrency": "multi"
+  },
+  "definitionFile": "assets/pipeline.json",
+  "tasksDir": "tasks",
+  "stages": [
+    {
+      "id": "scan",
+      "name": "Scan"
+    },
+    {
+      "id": "extract",
+      "name": "Extract"
+    },
+    {
+      "id": "classify",
+      "name": "Classify"
+    },
+    {
+      "id": "route",
+      "name": "Route"
+    },
+    {
+      "id": "present",
+      "name": "Present"
+    },
+    {
+      "id": "confirm",
+      "name": "Confirm"
+    },
+    {
+      "id": "report",
+      "name": "Report"
+    }
+  ],
+  "columns": [
+    {
+      "key": "doc_id",
+      "label": "Document ID",
+      "type": "text",
+      "required": null
+    },
+    {
+      "key": "client_name",
+      "label": "Client Name",
+      "type": "text",
+      "required": null
+    },
+    {
+      "key": "doc_type",
+      "label": "Document Type",
+      "type": "text",
+      "required": null
+    },
+    {
+      "key": "date_received",
+      "label": "Date Received",
+      "type": "date",
+      "required": null
+    },
+    {
+      "key": "email_subject",
+      "label": "Email Subject",
+      "type": "text",
+      "required": null
+    },
+    {
+      "key": "sender",
+      "label": "Sender",
+      "type": "text",
+      "required": null
+    },
+    {
+      "key": "filename",
+      "label": "Filename",
+      "type": "text",
+      "required": null
+    },
+    {
+      "key": "filing_status",
+      "label": "Filing Status",
+      "type": "text",
+      "required": null
+    },
+    {
+      "key": "confidence",
+      "label": "Confidence",
+      "type": "text",
+      "required": null
+    },
+    {
+      "key": "run_id",
+      "label": "Run ID",
+      "type": "text",
+      "required": null
+    }
+  ],
+  "transitionIds": [
+    "scan_to_extract",
+    "extract_to_classify",
+    "classify_to_route",
+    "route_to_present",
+    "route_to_report",
+    "present_to_confirm",
+    "confirm_to_report"
+  ]
+}

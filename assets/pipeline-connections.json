@@ -1,174 +1,228 @@
 {
   "schemaVersion": 3,
-  "commandId": "pl_f786e20bea32",
-  "trigger": "pl_f786e20bea32",
+  "resourceKey": "pipeline.victor.file-ranger-pipeline",
+  "trigger": "pipeline.victor.file-ranger-pipeline",
   "label": "File Ranger Pipeline",
   "updatedAt": 1793089892170,
   "nodes": [
     {
-      "id": "pipeline:pl_f786e20bea32",
+      "id": "pipeline:pipeline.victor.file-ranger-pipeline",
       "kind": "execution",
       "label": "File Ranger Pipeline",
       "description": "Pipeline state machine",
       "meta": {
         "executionType": "pipeline",
-        "pipelineId": "pl_f786e20bea32",
-        "collectionId": "coll_8432587f2424"
+        "pipelineRef": {
+          "kind": "pipeline",
+          "resourceKey": "pipeline.victor.file-ranger-pipeline"
+        },
+        "listRef": {
+          "kind": "list",
+          "resourceKey": "list.victor.filing-registry"
+        }
       }
     },
     {
-      "id": "pipeline-stage:pl_f786e20bea32:scan",
+      "id": "pipeline-stage:pipeline.victor.file-ranger-pipeline:scan",
       "kind": "pipeline_stage",
       "label": "Scan",
       "description": "File Ranger Pipeline",
       "meta": {
-        "pipelineId": "pl_f786e20bea32",
+        "pipelineRef": {
+          "kind": "pipeline",
+          "resourceKey": "pipeline.victor.file-ranger-pipeline"
+        },
         "stageId": "scan"
       }
     },
     {
-      "id": "pipeline-stage:pl_f786e20bea32:extract",
+      "id": "pipeline-stage:pipeline.victor.file-ranger-pipeline:extract",
       "kind": "pipeline_stage",
       "label": "Extract",
       "description": "File Ranger Pipeline",
       "meta": {
-        "pipelineId": "pl_f786e20bea32",
+        "pipelineRef": {
+          "kind": "pipeline",
+          "resourceKey": "pipeline.victor.file-ranger-pipeline"
+        },
         "stageId": "extract"
       }
     },
     {
-      "id": "pipeline-stage:pl_f786e20bea32:classify",
+      "id": "pipeline-stage:pipeline.victor.file-ranger-pipeline:classify",
       "kind": "pipeline_stage",
       "label": "Classify",
       "description": "File Ranger Pipeline",
       "meta": {
-        "pipelineId": "pl_f786e20bea32",
+        "pipelineRef": {
+          "kind": "pipeline",
+          "resourceKey": "pipeline.victor.file-ranger-pipeline"
+        },
         "stageId": "classify"
       }
     },
     {
-      "id": "pipeline-stage:pl_f786e20bea32:route",
+      "id": "pipeline-stage:pipeline.victor.file-ranger-pipeline:route",
       "kind": "pipeline_stage",
       "label": "Route",
       "description": "File Ranger Pipeline",
       "meta": {
-        "pipelineId": "pl_f786e20bea32",
+        "pipelineRef": {
+          "kind": "pipeline",
+          "resourceKey": "pipeline.victor.file-ranger-pipeline"
+        },
         "stageId": "route"
       }
     },
     {
-      "id": "pipeline-stage:pl_f786e20bea32:present",
+      "id": "pipeline-stage:pipeline.victor.file-ranger-pipeline:present",
       "kind": "pipeline_stage",
       "label": "Present",
       "description": "File Ranger Pipeline",
       "meta": {
-        "pipelineId": "pl_f786e20bea32",
+        "pipelineRef": {
+          "kind": "pipeline",
+          "resourceKey": "pipeline.victor.file-ranger-pipeline"
+        },
         "stageId": "present"
       }
     },
     {
-      "id": "pipeline-stage:pl_f786e20bea32:confirm",
+      "id": "pipeline-stage:pipeline.victor.file-ranger-pipeline:confirm",
       "kind": "pipeline_stage",
       "label": "Confirm",
       "description": "File Ranger Pipeline",
       "meta": {
-        "pipelineId": "pl_f786e20bea32",
+        "pipelineRef": {
+          "kind": "pipeline",
+          "resourceKey": "pipeline.victor.file-ranger-pipeline"
+        },
         "stageId": "confirm"
       }
     },
     {
-      "id": "pipeline-stage:pl_f786e20bea32:report",
+      "id": "pipeline-stage:pipeline.victor.file-ranger-pipeline:report",
       "kind": "pipeline_stage",
       "label": "Report",
       "description": "File Ranger Pipeline",
       "meta": {
-        "pipelineId": "pl_f786e20bea32",
+        "pipelineRef": {
+          "kind": "pipeline",
+          "resourceKey": "pipeline.victor.file-ranger-pipeline"
+        },
         "stageId": "report"
       }
     },
     {
-      "id": "collection:coll_8432587f2424",
+      "id": "list:list.victor.filing-registry",
       "kind": "collection",
-      "label": "coll_8432587f2424",
+      "label": "list.victor.filing-registry",
       "description": "File Ranger Pipeline collection",
       "meta": {
-        "collectionId": "coll_8432587f2424",
-        "pipelineId": "pl_f786e20bea32"
+        "listRef": {
+          "kind": "list",
+          "resourceKey": "list.victor.filing-registry"
+        },
+        "pipelineRef": {
+          "kind": "pipeline",
+          "resourceKey": "pipeline.victor.file-ranger-pipeline"
+        }
       }
     },
     {
-      "id": "pipeline-transition:pl_f786e20bea32:scan_to_extract",
+      "id": "pipeline-transition:pipeline.victor.file-ranger-pipeline:scan_to_extract",
       "kind": "pipeline_transition",
       "label": "Scan to Extract",
       "description": "Pipeline transition",
       "meta": {
-        "pipelineId": "pl_f786e20bea32",
+        "pipelineRef": {
+          "kind": "pipeline",
+          "resourceKey": "pipeline.victor.file-ranger-pipeline"
+        },
         "transitionId": "scan_to_extract",
         "trigger": "manual"
       }
     },
     {
-      "id": "pipeline-transition:pl_f786e20bea32:extract_to_classify",
+      "id": "pipeline-transition:pipeline.victor.file-ranger-pipeline:extract_to_classify",
       "kind": "pipeline_transition",
       "label": "Extract to Classify",
       "description": "Pipeline transition",
       "meta": {
-        "pipelineId": "pl_f786e20bea32",
+        "pipelineRef": {
+          "kind": "pipeline",
+          "resourceKey": "pipeline.victor.file-ranger-pipeline"
+        },
         "transitionId": "extract_to_classify",
         "trigger": "manual"
       }
     },
     {
-      "id": "pipeline-transition:pl_f786e20bea32:classify_to_route",
+      "id": "pipeline-transition:pipeline.victor.file-ranger-pipeline:classify_to_route",
       "kind": "pipeline_transition",
       "label": "Classify to Route",
       "description": "Pipeline transition",
       "meta": {
-        "pipelineId": "pl_f786e20bea32",
+        "pipelineRef": {
+          "kind": "pipeline",
+          "resourceKey": "pipeline.victor.file-ranger-pipeline"
+        },
         "transitionId": "classify_to_route",
         "trigger": "manual"
       }
     },
     {
-      "id": "pipeline-transition:pl_f786e20bea32:route_to_present",
+      "id": "pipeline-transition:pipeline.victor.file-ranger-pipeline:route_to_present",
       "kind": "pipeline_transition",
       "label": "Route to Present",
       "description": "Pipeline transition",
       "meta": {
-        "pipelineId": "pl_f786e20bea32",
+        "pipelineRef": {
+          "kind": "pipeline",
+          "resourceKey": "pipeline.victor.file-ranger-pipeline"
+        },
         "transitionId": "route_to_present",
         "trigger": "manual"
       }
     },
     {
-      "id": "pipeline-transition:pl_f786e20bea32:route_to_report",
+      "id": "pipeline-transition:pipeline.victor.file-ranger-pipeline:route_to_report",
       "kind": "pipeline_transition",
       "label": "Route to Report",
       "description": "Pipeline transition",
       "meta": {
-        "pipelineId": "pl_f786e20bea32",
+        "pipelineRef": {
+          "kind": "pipeline",
+          "resourceKey": "pipeline.victor.file-ranger-pipeline"
+        },
         "transitionId": "route_to_report",
         "trigger": "manual"
       }
     },
     {
-      "id": "pipeline-transition:pl_f786e20bea32:present_to_confirm",
+      "id": "pipeline-transition:pipeline.victor.file-ranger-pipeline:present_to_confirm",
       "kind": "pipeline_transition",
       "label": "Present to Confirm",
       "description": "Pipeline transition",
       "meta": {
-        "pipelineId": "pl_f786e20bea32",
+        "pipelineRef": {
+          "kind": "pipeline",
+          "resourceKey": "pipeline.victor.file-ranger-pipeline"
+        },
         "transitionId": "present_to_confirm",
         "trigger": "manual"
       }
     },
     {
-      "id": "pipeline-transition:pl_f786e20bea32:confirm_to_report",
+      "id": "pipeline-transition:pipeline.victor.file-ranger-pipeline:confirm_to_report",
       "kind": "pipeline_transition",
       "label": "Confirm to Report",
       "description": "Pipeline transition",
       "meta": {
-        "pipelineId": "pl_f786e20bea32",
+        "pipelineRef": {
+          "kind": "pipeline",
+          "resourceKey": "pipeline.victor.file-ranger-pipeline"
+        },
         "transitionId": "confirm_to_report",
         "trigger": "manual"
       }
@@ -176,142 +230,142 @@
   ],
   "edges": [
     {
-      "id": "edge:pipeline:pl_f786e20bea32:route:pipeline-stage:pl_f786e20bea32:scan:1",
-      "source": "pipeline:pl_f786e20bea32",
-      "target": "pipeline-stage:pl_f786e20bea32:scan",
+      "id": "edge:pipeline:pipeline.victor.file-ranger-pipeline:route:pipeline-stage:pipeline.victor.file-ranger-pipeline:scan:1",
+      "source": "pipeline:pipeline.victor.file-ranger-pipeline",
+      "target": "pipeline-stage:pipeline.victor.file-ranger-pipeline:scan",
       "relation": "route",
       "label": "start"
     },
     {
-      "id": "edge:pipeline:pl_f786e20bea32:writes:collection:coll_8432587f2424:2",
-      "source": "pipeline:pl_f786e20bea32",
-      "target": "collection:coll_8432587f2424",
+      "id": "edge:pipeline:pipeline.victor.file-ranger-pipeline:writes:list:list.victor.filing-registry:2",
+      "source": "pipeline:pipeline.victor.file-ranger-pipeline",
+      "target": "list:list.victor.filing-registry",
       "relation": "writes"
     },
     {
-      "id": "edge:pipeline-stage:pl_f786e20bea32:scan:triggers:pipeline-transition:pl_f786e20bea32:scan_to_extract:3",
-      "source": "pipeline-stage:pl_f786e20bea32:scan",
-      "target": "pipeline-transition:pl_f786e20bea32:scan_to_extract",
+      "id": "edge:pipeline-stage:pipeline.victor.file-ranger-pipeline:scan:triggers:pipeline-transition:pipeline.victor.file-ranger-pipeline:scan_to_extract:3",
+      "source": "pipeline-stage:pipeline.victor.file-ranger-pipeline:scan",
+      "target": "pipeline-transition:pipeline.victor.file-ranger-pipeline:scan_to_extract",
       "relation": "triggers"
     },
     {
-      "id": "edge:pipeline-transition:pl_f786e20bea32:scan_to_extract:success:pipeline-stage:pl_f786e20bea32:extract:4",
-      "source": "pipeline-transition:pl_f786e20bea32:scan_to_extract",
-      "target": "pipeline-stage:pl_f786e20bea32:extract",
+      "id": "edge:pipeline-transition:pipeline.victor.file-ranger-pipeline:scan_to_extract:success:pipeline-stage:pipeline.victor.file-ranger-pipeline:extract:4",
+      "source": "pipeline-transition:pipeline.victor.file-ranger-pipeline:scan_to_extract",
+      "target": "pipeline-stage:pipeline.victor.file-ranger-pipeline:extract",
       "relation": "success"
     },
     {
-      "id": "edge:pipeline-transition:pl_f786e20bea32:scan_to_extract:failure:pipeline-stage:pl_f786e20bea32:scan:5",
-      "source": "pipeline-transition:pl_f786e20bea32:scan_to_extract",
-      "target": "pipeline-stage:pl_f786e20bea32:scan",
+      "id": "edge:pipeline-transition:pipeline.victor.file-ranger-pipeline:scan_to_extract:failure:pipeline-stage:pipeline.victor.file-ranger-pipeline:scan:5",
+      "source": "pipeline-transition:pipeline.victor.file-ranger-pipeline:scan_to_extract",
+      "target": "pipeline-stage:pipeline.victor.file-ranger-pipeline:scan",
       "relation": "failure"
     },
     {
-      "id": "edge:pipeline-stage:pl_f786e20bea32:extract:triggers:pipeline-transition:pl_f786e20bea32:extract_to_classify:6",
-      "source": "pipeline-stage:pl_f786e20bea32:extract",
-      "target": "pipeline-transition:pl_f786e20bea32:extract_to_classify",
+      "id": "edge:pipeline-stage:pipeline.victor.file-ranger-pipeline:extract:triggers:pipeline-transition:pipeline.victor.file-ranger-pipeline:extract_to_classify:6",
+      "source": "pipeline-stage:pipeline.victor.file-ranger-pipeline:extract",
+      "target": "pipeline-transition:pipeline.victor.file-ranger-pipeline:extract_to_classify",
       "relation": "triggers"
     },
     {
-      "id": "edge:pipeline-transition:pl_f786e20bea32:extract_to_classify:success:pipeline-stage:pl_f786e20bea32:classify:7",
-      "source": "pipeline-transition:pl_f786e20bea32:extract_to_classify",
-      "target": "pipeline-stage:pl_f786e20bea32:classify",
+      "id": "edge:pipeline-transition:pipeline.victor.file-ranger-pipeline:extract_to_classify:success:pipeline-stage:pipeline.victor.file-ranger-pipeline:classify:7",
+      "source": "pipeline-transition:pipeline.victor.file-ranger-pipeline:extract_to_classify",
+      "target": "pipeline-stage:pipeline.victor.file-ranger-pipeline:classify",
       "relation": "success"
     },
     {
-      "id": "edge:pipeline-transition:pl_f786e20bea32:extract_to_classify:failure:pipeline-stage:pl_f786e20bea32:extract:8",
-      "source": "pipeline-transition:pl_f786e20bea32:extract_to_classify",
-      "target": "pipeline-stage:pl_f786e20bea32:extract",
+      "id": "edge:pipeline-transition:pipeline.victor.file-ranger-pipeline:extract_to_classify:failure:pipeline-stage:pipeline.victor.file-ranger-pipeline:extract:8",
+      "source": "pipeline-transition:pipeline.victor.file-ranger-pipeline:extract_to_classify",
+      "target": "pipeline-stage:pipeline.victor.file-ranger-pipeline:extract",
       "relation": "failure"
     },
     {
-      "id": "edge:pipeline-stage:pl_f786e20bea32:classify:triggers:pipeline-transition:pl_f786e20bea32:classify_to_route:9",
-      "source": "pipeline-stage:pl_f786e20bea32:classify",
-      "target": "pipeline-transition:pl_f786e20bea32:classify_to_route",
+      "id": "edge:pipeline-stage:pipeline.victor.file-ranger-pipeline:classify:triggers:pipeline-transition:pipeline.victor.file-ranger-pipeline:classify_to_route:9",
+      "source": "pipeline-stage:pipeline.victor.file-ranger-pipeline:classify",
+      "target": "pipeline-transition:pipeline.victor.file-ranger-pipeline:classify_to_route",
       "relation": "triggers"
     },
     {
-      "id": "edge:pipeline-transition:pl_f786e20bea32:classify_to_route:success:pipeline-stage:pl_f786e20bea32:route:10",
-      "source": "pipeline-transition:pl_f786e20bea32:classify_to_route",
-      "target": "pipeline-stage:pl_f786e20bea32:route",
+      "id": "edge:pipeline-transition:pipeline.victor.file-ranger-pipeline:classify_to_route:success:pipeline-stage:pipeline.victor.file-ranger-pipeline:route:10",
+      "source": "pipeline-transition:pipeline.victor.file-ranger-pipeline:classify_to_route",
+      "target": "pipeline-stage:pipeline.victor.file-ranger-pipeline:route",
       "relation": "success"
     },
     {
-      "id": "edge:pipeline-transition:pl_f786e20bea32:classify_to_route:failure:pipeline-stage:pl_f786e20bea32:classify:11",
-      "source": "pipeline-transition:pl_f786e20bea32:classify_to_route",
-      "target": "pipeline-stage:pl_f786e20bea32:classify",
+      "id": "edge:pipeline-transition:pipeline.victor.file-ranger-pipeline:classify_to_route:failure:pipeline-stage:pipeline.victor.file-ranger-pipeline:classify:11",
+      "source": "pipeline-transition:pipeline.victor.file-ranger-pipeline:classify_to_route",
+      "target": "pipeline-stage:pipeline.victor.file-ranger-pipeline:classify",
       "relation": "failure"
     },
     {
-      "id": "edge:pipeline-stage:pl_f786e20bea32:route:triggers:pipeline-transition:pl_f786e20bea32:route_to_present:12",
-      "source": "pipeline-stage:pl_f786e20bea32:route",
-      "target": "pipeline-transition:pl_f786e20bea32:route_to_present",
+      "id": "edge:pipeline-stage:pipeline.victor.file-ranger-pipeline:route:triggers:pipeline-transition:pipeline.victor.file-ranger-pipeline:route_to_present:12",
+      "source": "pipeline-stage:pipeline.victor.file-ranger-pipeline:route",
+      "target": "pipeline-transition:pipeline.victor.file-ranger-pipeline:route_to_present",
       "relation": "triggers"
     },
     {
-      "id": "edge:pipeline-transition:pl_f786e20bea32:route_to_present:success:pipeline-stage:pl_f786e20bea32:present:13",
-      "source": "pipeline-transition:pl_f786e20bea32:route_to_present",
-      "target": "pipeline-stage:pl_f786e20bea32:present",
+      "id": "edge:pipeline-transition:pipeline.victor.file-ranger-pipeline:route_to_present:success:pipeline-stage:pipeline.victor.file-ranger-pipeline:present:13",
+      "source": "pipeline-transition:pipeline.victor.file-ranger-pipeline:route_to_present",
+      "target": "pipeline-stage:pipeline.victor.file-ranger-pipeline:present",
       "relation": "success"
     },
     {
-      "id": "edge:pipeline-transition:pl_f786e20bea32:route_to_present:failure:pipeline-stage:pl_f786e20bea32:route:14",
-      "source": "pipeline-transition:pl_f786e20bea32:route_to_present",
-      "target": "pipeline-stage:pl_f786e20bea32:route",
+      "id": "edge:pipeline-transition:pipeline.victor.file-ranger-pipeline:route_to_present:failure:pipeline-stage:pipeline.victor.file-ranger-pipeline:route:14",
+      "source": "pipeline-transition:pipeline.victor.file-ranger-pipeline:route_to_present",
+      "target": "pipeline-stage:pipeline.victor.file-ranger-pipeline:route",
       "relation": "failure"
     },
     {
-      "id": "edge:pipeline-stage:pl_f786e20bea32:route:triggers:pipeline-transition:pl_f786e20bea32:route_to_report:15",
-      "source": "pipeline-stage:pl_f786e20bea32:route",
-      "target": "pipeline-transition:pl_f786e20bea32:route_to_report",
+      "id": "edge:pipeline-stage:pipeline.victor.file-ranger-pipeline:route:triggers:pipeline-transition:pipeline.victor.file-ranger-pipeline:route_to_report:15",
+      "source": "pipeline-stage:pipeline.victor.file-ranger-pipeline:route",
+      "target": "pipeline-transition:pipeline.victor.file-ranger-pipeline:route_to_report",
       "relation": "triggers"
     },
     {
-      "id": "edge:pipeline-transition:pl_f786e20bea32:route_to_report:success:pipeline-stage:pl_f786e20bea32:report:16",
-      "source": "pipeline-transition:pl_f786e20bea32:route_to_report",
-      "target": "pipeline-stage:pl_f786e20bea32:report",
+      "id": "edge:pipeline-transition:pipeline.victor.file-ranger-pipeline:route_to_report:success:pipeline-stage:pipeline.victor.file-ranger-pipeline:report:16",
+      "source": "pipeline-transition:pipeline.victor.file-ranger-pipeline:route_to_report",
+      "target": "pipeline-stage:pipeline.victor.file-ranger-pipeline:report",
       "relation": "success"
     },
     {
-      "id": "edge:pipeline-transition:pl_f786e20bea32:route_to_report:failure:pipeline-stage:pl_f786e20bea32:route:17",
-      "source": "pipeline-transition:pl_f786e20bea32:route_to_report",
-      "target": "pipeline-stage:pl_f786e20bea32:route",
+      "id": "edge:pipeline-transition:pipeline.victor.file-ranger-pipeline:route_to_report:failure:pipeline-stage:pipeline.victor.file-ranger-pipeline:route:17",
+      "source": "pipeline-transition:pipeline.victor.file-ranger-pipeline:route_to_report",
+      "target": "pipeline-stage:pipeline.victor.file-ranger-pipeline:route",
       "relation": "failure"
     },
     {
-      "id": "edge:pipeline-stage:pl_f786e20bea32:present:triggers:pipeline-transition:pl_f786e20bea32:present_to_confirm:18",
-      "source": "pipeline-stage:pl_f786e20bea32:present",
-      "target": "pipeline-transition:pl_f786e20bea32:present_to_confirm",
+      "id": "edge:pipeline-stage:pipeline.victor.file-ranger-pipeline:present:triggers:pipeline-transition:pipeline.victor.file-ranger-pipeline:present_to_confirm:18",
+      "source": "pipeline-stage:pipeline.victor.file-ranger-pipeline:present",
+      "target": "pipeline-transition:pipeline.victor.file-ranger-pipeline:present_to_confirm",
       "relation": "triggers"
     },
     {
-      "id": "edge:pipeline-transition:pl_f786e20bea32:present_to_confirm:success:pipeline-stage:pl_f786e20bea32:confirm:19",
-      "source": "pipeline-transition:pl_f786e20bea32:present_to_confirm",
-      "target": "pipeline-stage:pl_f786e20bea32:confirm",
+      "id": "edge:pipeline-transition:pipeline.victor.file-ranger-pipeline:present_to_confirm:success:pipeline-stage:pipeline.victor.file-ranger-pipeline:confirm:19",
+      "source": "pipeline-transition:pipeline.victor.file-ranger-pipeline:present_to_confirm",
+      "target": "pipeline-stage:pipeline.victor.file-ranger-pipeline:confirm",
       "relation": "success"
     },
     {
-      "id": "edge:pipeline-transition:pl_f786e20bea32:present_to_confirm:failure:pipeline-stage:pl_f786e20bea32:present:20",
-      "source": "pipeline-transition:pl_f786e20bea32:present_to_confirm",
-      "target": "pipeline-stage:pl_f786e20bea32:present",
+      "id": "edge:pipeline-transition:pipeline.victor.file-ranger-pipeline:present_to_confirm:failure:pipeline-stage:pipeline.victor.file-ranger-pipeline:present:20",
+      "source": "pipeline-transition:pipeline.victor.file-ranger-pipeline:present_to_confirm",
+      "target": "pipeline-stage:pipeline.victor.file-ranger-pipeline:present",
       "relation": "failure"
     },
     {
-      "id": "edge:pipeline-stage:pl_f786e20bea32:confirm:triggers:pipeline-transition:pl_f786e20bea32:confirm_to_report:21",
-      "source": "pipeline-stage:pl_f786e20bea32:confirm",
-      "target": "pipeline-transition:pl_f786e20bea32:confirm_to_report",
+      "id": "edge:pipeline-stage:pipeline.victor.file-ranger-pipeline:confirm:triggers:pipeline-transition:pipeline.victor.file-ranger-pipeline:confirm_to_report:21",
+      "source": "pipeline-stage:pipeline.victor.file-ranger-pipeline:confirm",
+      "target": "pipeline-transition:pipeline.victor.file-ranger-pipeline:confirm_to_report",
       "relation": "triggers"
     },
     {
-      "id": "edge:pipeline-transition:pl_f786e20bea32:confirm_to_report:success:pipeline-stage:pl_f786e20bea32:report:22",
-      "source": "pipeline-transition:pl_f786e20bea32:confirm_to_report",
-      "target": "pipeline-stage:pl_f786e20bea32:report",
+      "id": "edge:pipeline-transition:pipeline.victor.file-ranger-pipeline:confirm_to_report:success:pipeline-stage:pipeline.victor.file-ranger-pipeline:report:22",
+      "source": "pipeline-transition:pipeline.victor.file-ranger-pipeline:confirm_to_report",
+      "target": "pipeline-stage:pipeline.victor.file-ranger-pipeline:report",
       "relation": "success"
     },
     {
-      "id": "edge:pipeline-transition:pl_f786e20bea32:confirm_to_report:failure:pipeline-stage:pl_f786e20bea32:confirm:23",
-      "source": "pipeline-transition:pl_f786e20bea32:confirm_to_report",
-      "target": "pipeline-stage:pl_f786e20bea32:confirm",
+      "id": "edge:pipeline-transition:pipeline.victor.file-ranger-pipeline:confirm_to_report:failure:pipeline-stage:pipeline.victor.file-ranger-pipeline:confirm:23",
+      "source": "pipeline-transition:pipeline.victor.file-ranger-pipeline:confirm_to_report",
+      "target": "pipeline-stage:pipeline.victor.file-ranger-pipeline:confirm",
       "relation": "failure"
     }
   ],

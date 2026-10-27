@@ -1,14 +1,99 @@
 {
-  "schemaVersion": 1,
-  "pageId": "bd4f9535-2b3a-4195-8257-9a20e5464b6a",
-  "pipelineId": "pl_f786e20bea32",
+  "schemaVersion": 2,
+  "resourceKey": "pipeline.victor.file-ranger-pipeline",
+  "storage": {
+    "listRef": {
+      "kind": "list",
+      "resourceKey": "list.victor.filing-registry"
+    }
+  },
   "pipeline": {
-    "id": "pl_f786e20bea32",
-    "pageId": "bd4f9535-2b3a-4195-8257-9a20e5464b6a",
-    "userId": "1792501371579",
     "name": "File Ranger Pipeline",
+    "isPublic": true,
     "description": null,
-    "collectionId": "coll_8432587f2424",
+    "runConcurrency": "multi",
+    "columns": [
+      {
+        "id": "column_doc_id",
+        "key": "doc_id",
+        "label": "Document ID",
+        "type": "text",
+        "required": null,
+        "order": 0
+      },
+      {
+        "id": "column_client_name",
+        "key": "client_name",
+        "label": "Client Name",
+        "type": "text",
+        "required": null,
+        "order": 1
+      },
+      {
+        "id": "column_doc_type",
+        "key": "doc_type",
+        "label": "Document Type",
+        "type": "text",
+        "required": null,
+        "order": 2
+      },
+      {
+        "id": "column_date_received",
+        "key": "date_received",
+        "label": "Date Received",
+        "type": "date",
+        "required": null,
+        "order": 3
+      },
+      {
+        "id": "column_email_subject",
+        "key": "email_subject",
+        "label": "Email Subject",
+        "type": "text",
+        "required": null,
+        "order": 4
+      },
+      {
+        "id": "column_sender",
+        "key": "sender",
+        "label": "Sender",
+        "type": "text",
+        "required": null,
+        "order": 5
+      },
+      {
+        "id": "column_filename",
+        "key": "filename",
+        "label": "Filename",
+        "type": "text",
+        "required": null,
+        "order": 6
+      },
+      {
+        "id": "column_filing_status",
+        "key": "filing_status",
+        "label": "Filing Status",
+        "type": "text",
+        "required": null,
+        "order": 7
+      },
+      {
+        "id": "column_confidence",
+        "key": "confidence",
+        "label": "Confidence",
+        "type": "text",
+        "required": null,
+        "order": 8
+      },
+      {
+        "id": "column_run_id",
+        "key": "run_id",
+        "label": "Run ID",
+        "type": "text",
+        "required": null,
+        "order": 9
+      }
+    ],
     "stages": [
       {
         "id": "scan",
@@ -413,98 +498,9 @@
       }
     ],
     "acquisitionRecipes": [],
-    "columns": [
-      {
-        "id": "column_doc_id",
-        "key": "doc_id",
-        "label": "Document ID",
-        "type": "text",
-        "required": null,
-        "order": 0
-      },
-      {
-        "id": "column_client_name",
-        "key": "client_name",
-        "label": "Client Name",
-        "type": "text",
-        "required": null,
-        "order": 1
-      },
-      {
-        "id": "column_doc_type",
-        "key": "doc_type",
-        "label": "Document Type",
-        "type": "text",
-        "required": null,
-        "order": 2
-      },
-      {
-        "id": "column_date_received",
-        "key": "date_received",
-        "label": "Date Received",
-        "type": "date",
-        "required": null,
-        "order": 3
-      },
-      {
-        "id": "column_email_subject",
-        "key": "email_subject",
-        "label": "Email Subject",
-        "type": "text",
-        "required": null,
-        "order": 4
-      },
-      {
-        "id": "column_sender",
-        "key": "sender",
-        "label": "Sender",
-        "type": "text",
-        "required": null,
-        "order": 5
-      },
-      {
-        "id": "column_filename",
-        "key": "filename",
-        "label": "Filename",
-        "type": "text",
-        "required": null,
-        "order": 6
-      },
-      {
-        "id": "column_filing_status",
-        "key": "filing_status",
-        "label": "Filing Status",
-        "type": "text",
-        "required": null,
-        "order": 7
-      },
-      {
-        "id": "column_confidence",
-        "key": "confidence",
-        "label": "Confidence",
-        "type": "text",
-        "required": null,
-        "order": 8
-      },
-      {
-        "id": "column_run_id",
-        "key": "run_id",
-        "label": "Run ID",
-        "type": "text",
-        "required": null,
-        "order": 9
-      }
-    ],
-    "runConcurrency": "multi",
-    "projectionRepairVersion": 1,
-    "version": 15,
-    "isPublic": true,
-    "isDeleted": false,
-    "createdAt": "2026-10-26T10:09:41.080Z",
-    "updatedAt": "2026-10-27T08:31:32.170Z",
+    "existingCasePolicies": [],
     "child": null,
-    "childPipelines": null,
-    "existingCasePolicies": []
+    "childPipelines": null
   },
-  "commitMessage": "Initial migration from pipeline wizard"
+  "commitMessage": "Sync pipeline machine definition to git"
 }
